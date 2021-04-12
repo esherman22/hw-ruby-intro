@@ -21,7 +21,7 @@ def hello(name)
 end
 
 def starts_with_consonant? s
-  return s.empty? ? false : s[0] !~ /[\W]A|E|I|O|U/i
+  return s.empty? ? false : s[0] =~ /\A[^aeiou]/
 end
 
 def binary_multiple_of_4? s
