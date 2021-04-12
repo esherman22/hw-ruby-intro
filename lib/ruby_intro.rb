@@ -7,11 +7,11 @@ def sum(array)
 end
 
 def max_2_sum(array)
-  return array.empty? ? 0 : array.length == 1 ? array[0] : array.delete_at(array.max)) + array.max
+  return array.empty? ? 0 : array.length == 1 ? array[0] : array.delete_at(array.max) + array.max
 end
 
 def sum_to_n?(array, n)
-  return array.empty? ? false : array.length == 1 ? false : array.combination(2).to_a.select {|x| x[0] + x[1] == n}.empty? ? false : true
+  return array.empty? ? false : array.length == 1 ? false : array.combination(2).to_a.select (|x| x[0] + x[1] == n).empty? ? false : true
 end
 
 # Part 2
@@ -31,20 +31,20 @@ end
 # Part 3
 
 class BookInStock
-	def init(ISBN, price)
+	def init(isbn, price)
 	
-		if ISBN.empty? or price <= 0
+		if isbn.empty? or price <= 0
 			raise ArgumentError
 		end
 		
-		@ISBN = ISBN
+		@isbn = isbn
 		@price = price
 	end
 	
-	attr_reader :ISBN
+	attr_reader :isbn
 	attr_reader :price
 	
-	attr_writer :ISBN
+	attr_writer :isbn
 	attr_writer :price
 	
 	def price_as_string()
