@@ -31,7 +31,7 @@ end
 # Part 3
 
 class BookInStock
-	def init(isbn, price)
+	def initialize(isbn, price)
 	
 		if isbn.empty? or price <= 0
 			raise ArgumentError
