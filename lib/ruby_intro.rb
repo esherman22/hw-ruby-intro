@@ -49,8 +49,8 @@ class BookInStock
 	attr_writer :isbn
 	attr_writer :price
 	
-	def price_as_string()
-		return "$#{sprintf("%.2f",(price))}"
+	def price_as_string
+		return "#{sprintf("\$%.2f",(price))}"
 	end
 	
 end
